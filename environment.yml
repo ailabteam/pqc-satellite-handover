@@ -1,0 +1,28 @@
+name: sat-pqh-env
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - pip
+  # Core numerical and data handling
+  - numpy
+  - pandas
+  - scipy
+  # GPU computing (CuPy is a great choice for NumPy on GPU)
+  - cupy
+  # Satellite orbit simulation
+  - skyfield
+  # Network simulation
+  - simpy
+  # Visualization
+  - matplotlib
+  - seaborn
+  - plotly
+  # Progress bars
+  - tqdm
+  # PQC Library (will be installed via pip)
+  - pip:
+    - oqs

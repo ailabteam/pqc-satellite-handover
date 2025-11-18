@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Conda environment files
+.conda/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Sensitive files
+.env
+
+# Data, results, and logs (can be large)
+data/
+results/
+logs/
+
+# IDE settings
+.vscode/
+.idea/
+.DS_Store
