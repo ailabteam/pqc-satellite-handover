@@ -1,28 +1,34 @@
 name: sat-pqh-env
 channels:
-  - pytorch
-  - nvidia
-  - conda-forge
-  - defaults
+  - conda-forge  # Kênh chính và ưu tiên cao nhất
+  - nvidia       # Kênh cần thiết cho CuPy
 dependencies:
-  - python=3.12
+  # --- Core ---
+  - python=3.11
   - pip
-  # Core numerical and data handling
+  
+  # --- GPU computing ---
+  # Yêu cầu CuPy tương thích với CUDA > 12.0
+  # Conda sẽ tự động chọn phiên bản CuPy phù hợp nhất với CUDA 12.5 của bạn
+  - cupy >=12.0
+  
+  # --- Core numerical and data handling ---
   - numpy
   - pandas
   - scipy
-  # GPU computing (CuPy is a great choice for NumPy on GPU)
-  - cupy
-  # Satellite orbit simulation
+  
+  # --- Satellite orbit simulation ---
   - skyfield
-  # Network simulation
+  
+  # --- Network simulation ---
   - simpy
-  # Visualization
+  
+  # --- Visualization & Utilities ---
   - matplotlib
   - seaborn
   - plotly
-  # Progress bars
   - tqdm
-  # PQC Library (will be installed via pip)
+  
+  # --- PQC Library (will be installed via pip) ---
   - pip:
     - oqs
